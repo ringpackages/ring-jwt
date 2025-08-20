@@ -1,0 +1,17 @@
+name: Ring Tests CI
+
+on: [ push ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Run JWT Tests
+      uses: ysdragon/ring-action@v1.2.2
+      with:
+        file: "src/jwt_test.ring"
+    - name: Run HMAC Tests
+      uses: ysdragon/ring-action@v1.2.2
+      with:
+        file: "src/hmac_test.ring"
