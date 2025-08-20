@@ -59,7 +59,7 @@ Class JWT
 			raise("Invalid signature")
 		ok
 
-		# 4. Return the decoded payload
+		# Return the decoded payload
 		return payload
 
 	private

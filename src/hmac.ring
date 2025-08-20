@@ -24,7 +24,7 @@ load "openssllib.ring"
 		- Pads and XOR operations are performed as per RFC 2104.
 */
 func hmac(key, message, algorithm, raw_output)
-	# 1. Set algorithm-specific parameters
+	# Set algorithm-specific parameters
 	block_size = 0
 	hash_function_name = ""
 
