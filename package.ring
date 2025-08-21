@@ -30,6 +30,7 @@ aPackageInfo = [
 		"main.ring",
 		"examples/01_jwt_api.ring",
 		"examples/02_jwt_gui.ring",
+		"examples/03_jwt_middleware.ring",
 		"examples/static/app.js",
 		"examples/static/style.css",
 		"src/hmac.ring",
