@@ -29,10 +29,9 @@ oServer = new Server {
     ? "Protected routes (require JWT):"
     ? "  GET  /dashboard  - User dashboard"
     ? "  GET  /profile    - User profile"
-    ? "  POST /api/data   - API data endpoint"
     ? "  GET  /admin      - Admin panel (admin role required)"
     ? ""
-    ? "Server listening on: 0.0.0.0:8080"
+    ? "Server listening on: http://0.0.0.0:8080"
     listen("0.0.0.0", 8080)
 }
 
