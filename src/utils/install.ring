@@ -44,8 +44,14 @@ next
 # Change back to the original directory
 chdir(cCurrentDir)
 
-# Write the load command to the jwt.ring file
-write(exefolder() + "load" + cPathSep + "jwt.ring", `load "/../../tools/ringpm/packages/ring-jwt/lib.ring"`)
+# Check if ring-jwt.ring exists in the exefolder
+if fexists(exefolder() + "ring-jwt.ring")
+	# Remove the existing ring-jwt.ring file
+	remove(exefolder() + "ring-jwt.ring")
+
+	# Write the load command to the jwt.ring file
+	write(exefolder() + "load" + cPathSep + "jwt.ring", `load "/../../tools/ringpm/packages/ring-jwt/lib.ring"`)
+ok
 
 ? colorText([:text = "Successfully installed Ring JWT!", :color = :BRIGHT_GREEN, :style = :BOLD])
 ? colorText([:text = "You can refer to samples in: ", :color = :CYAN]) + colorText([:text = cSamplesPath, :color = :YELLOW])
